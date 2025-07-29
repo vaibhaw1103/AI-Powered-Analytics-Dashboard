@@ -2,6 +2,9 @@
 
 A modern, AI-powered marketing dashboard built with Next.js featuring beautiful glass morphism design, comprehensive analytics, and multi-provider AI integration.
 
+## 🔗 **Live Demo**
+**[📱 View Live Dashboard →](http://admybrand-dashboard-self.vercel.app/)**
+
 ![Dashboard Preview](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=ADmyBRAND+Dashboard)
 
 ## ✨ Features
