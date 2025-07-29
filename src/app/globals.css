@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Light theme (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 248 250 252; /* Light gray */
+  --foreground: 15 23 42; /* Dark slate */
+  --card: 255 255 255; /* White */
+  --card-foreground: 15 23 42;
+  --border: 226 232 240; /* Light gray border */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark theme */
+.dark {
+  --background: 0 0 0; /* Black */
+  --foreground: 248 250 252; /* Off-white */
+  --card: 20 20 20; /* Dark gray */
+  --card-foreground: 248 250 252;
+  --border: 55 65 81; /* Gray border */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Apply theme colors */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Chart grid line styling */
+.recharts-cartesian-grid-line line {
+  stroke: rgb(var(--border));
+  stroke-dasharray: none; /* Remove dashed lines */
 }
